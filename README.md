@@ -74,6 +74,7 @@ kubectl get taskrun -A -l carto.run/runnable-name=<workload-name> -l carto.run/r
 
 ## source scanner
 
+```
 kubectl get clustersourcetemplate source-scanner-template -o yaml
 
 kubectl get sourcescan <workload-name> -n <namespace> -o yaml
@@ -83,9 +84,10 @@ kubectl get scantemplate blob-source-scan-template -n <namespace> -o yaml
 kubectl get scanpolicy scanpolicy-sample -n <namespace> -o yaml
 
 kubectl get jobs -A -l carto.run/workload-name=<workload-name> -l carto.run/resource-name=source-scanner -o yaml
-
+```
 
 ## image scanner
+```
 kubectl get clusterimagetemplate  image-scanner-template -o yaml
 
 kubectl get imagescan <workload-name> -n <namespace> -o yaml
@@ -96,4 +98,4 @@ kubectl get scanpolicy scanpolicy-sample -n <namespace> -o yaml
 
 kubectl get jobs -A -l carto.run/workload-name=<workload-name> -l carto.run/resource-name=image-scanner -o yaml
 
-
+```
