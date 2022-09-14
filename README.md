@@ -64,7 +64,11 @@ kubectl get clustertask commit-and-pr -o yaml
 kubectl get taskrun -A -l carto.run/runnable-name=<workload-name> -l carto.run/run-template-name=commit-and-pr-pipelinerun -o yaml
 ```
 
+## Deliverable
 
+kubectl get clustertemplates deliverable-template -o yaml
+
+kubectl get deliverables <workload-name> -n <namespace> -o yaml
 
 ## source tester
 
