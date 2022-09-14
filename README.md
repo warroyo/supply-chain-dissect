@@ -66,9 +66,11 @@ kubectl get taskrun -A -l carto.run/runnable-name=<workload-name> -l carto.run/r
 
 ## Deliverable
 
+```
 kubectl get clustertemplates deliverable-template -o yaml
 
 kubectl get deliverables <workload-name> -n <namespace> -o yaml
+```
 
 ## source tester
 
