@@ -1,5 +1,11 @@
 # supply-chain-dissect
 
+
+## Cluster Supply Chains
+
+kubectl get clustersupplychain source-test-scan-to-url -o yaml
+
+
 ## source provider
 
 ```
@@ -103,3 +109,20 @@ kubectl get scanpolicy scanpolicy-sample -n <namespace> -o yaml
 kubectl get jobs -A -l carto.run/workload-name=<workload-name> -l carto.run/resource-name=image-scanner -o yaml
 
 ```
+
+
+## Cluster Deliveries
+
+kubectl get clusterdeliveries delivery-basic -o yaml
+
+## Pull Config
+
+kubectl get clustersourcetemplate delivery-source-template -o yaml
+
+kubectl get gitrepo <workload-name> -n <namespace> -o yaml
+
+## Delivery
+
+ kubectl get clusterdeploymenttemplates  app-deploy -o yaml
+
+ kubectl get apps <workload-name> -n <namespace> -o yaml
