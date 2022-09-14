@@ -118,17 +118,21 @@ kubectl get jobs -A -l carto.run/workload-name=<workload-name> -l carto.run/reso
 
 
 ## Cluster Deliveries
-
+```
 kubectl get clusterdeliveries delivery-basic -o yaml
+```
 
 ## Pull Config
 
+```
 kubectl get clustersourcetemplate delivery-source-template -o yaml
 
 kubectl get gitrepo <workload-name> -n <namespace> -o yaml
+```
 
 ## Delivery
+```
+kubectl get clusterdeploymenttemplates  app-deploy -o yaml
 
- kubectl get clusterdeploymenttemplates  app-deploy -o yaml
-
- kubectl get apps <workload-name> -n <namespace> -o yaml
+kubectl get apps <workload-name> -n <namespace> -o yaml
+```
