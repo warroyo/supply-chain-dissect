@@ -31,18 +31,22 @@ kubectl get taskrun -A -l carto.run/runnable-name=<workload-name> -l carto.run/r
 
 
 ## config provider
-
+```
 kubectl clusterconfigtemplates convention-template -o yaml
 
 kubectl get podintent <workload-name> -n <namespace> -o yaml
+```
 
 ## app config
+```
 kubectl get clusterconfigtemplates config-template -o yaml
 
 kubectl get configmap <workload-name> -n <namespace> -o yaml
+```
 
 ## config writer
 
+```
 kubectl get clusterTemplate config-writer-and-pull-requester-template -o yaml
 
 kubectl get runnable <workload-name>-config-writer-pull-requester -n <namespace> -o yaml
@@ -52,7 +56,7 @@ kubectl get clusterruntemplate commit-and-pr-pipelinerun -o yaml
 kubectl get clustertask commit-and-pr -o yaml
 
 kubectl get taskrun -A -l carto.run/runnable-name=<workload-name> -l carto.run/run-template-name=commit-and-pr-pipelinerun -o yaml
-
+```
 
 
 
